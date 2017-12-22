@@ -15,7 +15,6 @@ void afficheEnsembleDePoint(ensemble_t *e,univers *u){
         printf("\n");
         tmp=tmp->suiv;
     }
-    printf("\n");
 }
 
 void afficheTousEnsembleDePoints(univers* u, ensemble_t **ens){
@@ -28,7 +27,7 @@ void afficheTousEnsembleDePoints(univers* u, ensemble_t **ens){
 
 void afficheUnivers(univers *u){
     int i,j;
-    printf("\n\nUnivers =>\n\nNombre de point : %d\n\n",u->taille);
+    printf("\n\nUnivers =>\nNombre de point : %d\n\n",u->taille);
     for(i=0;i<u->taille;i++){
         affichePoint(u->point[i]);
         printf("\n");
@@ -120,7 +119,7 @@ int existUnivers(univers *u, point *p){
         for(j=0;j<3;j++){
             if(u->point[i][j]==p[j]){
                 if(j==2){
-                    printf("\n\nLe point est déjà dans l'univers.\n");
+                    printf("\nLe point est déjà dans l'univers.\n");
                     return i;
                 }
             }     
@@ -267,6 +266,7 @@ void expression(univers *u, ensemble_t **ens){
     }
     //Ajout du centre si a dans l'expression
     for(i=0;i<centre;i++){
+        printf("\n<------ Centre %d ------->\n",i);
         e=ajouterCentre(e,u);
     }
     printf("\n\n<------ RÉSULTAT ------>\n");

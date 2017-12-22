@@ -15,11 +15,11 @@ int main(){
     ensemble_t **ens=initEnsemble(u,n);
     
     printf("\n\n<------------------------------ INITIALISATION ------------------------------>");
-    afficheUnivers(u);
     afficheTousEnsembleDePoints(u,ens);
 
-    printf("\n\n<------------------------------ CALCUL DU CENTRE ------------------------------>");
+    printf("\n\n<------------------------------ CALCUL DU CENTRE ------------------------------>\n");
     for(i=0;i<3;i++){
+        printf("Ensemble %d :\n",i);
         ens[i]=ajouterCentre(ens[i],u);
     }
     afficheUnivers(u);

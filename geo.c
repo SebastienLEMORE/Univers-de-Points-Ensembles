@@ -14,11 +14,11 @@ void affichePoint(point *p){
 **/
 point *lirePoint(){
     point *p=(point *) malloc(sizeof(int)*3);
-    printf("\nX : ");
+    printf("X : ");
     scanf("%d",&p[0]);
-    printf("\nY : ");
+    printf("Y : ");
     scanf("%d",&p[1]);
-    printf("\nZ : ");
+    printf("Z : ");
     scanf("%d",&p[2]);
     printf("\n");
     return p;
